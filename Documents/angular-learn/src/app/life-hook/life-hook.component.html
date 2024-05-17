@@ -1,0 +1,12 @@
+<p>life-hook works!</p>
+
+
+<h2>Parent to Child</h2>
+<input type="input" #val>
+<button type="submit" (click)="onSubmit(val)">CLICK</button>
+<button type="reset" (click)="reset()">RESET</button>
+<app-input *ngIf="distroy" [myValue]="value" (childData)="childData($event)"> ng content {{value}}</app-input>
+
+<p>input {{revData}}</p>
+
+<button type="submit" (click)="destroy()">destroy</button>

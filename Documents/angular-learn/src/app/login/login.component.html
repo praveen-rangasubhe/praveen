@@ -1,0 +1,27 @@
+<br>
+
+
+<form [formGroup]="Form" (ngSubmit)="onSubmit()">
+    <div class="input-group form-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">@</span>
+        </div>
+        <input type="text" class="form-control" formControlName="email" placeholder="Email" aria-label="Username"
+            aria-describedby="basic-addon1">
+        <small *ngIf="!Form.get('email')?.valid &&  Form.get('email')?.touched">Please enter valid email address</small>
+    </div>
+    <div class="input-group form-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">@</span>
+        </div>
+        <input type="password" class="form-control" formControlName="password" placeholder="Password"
+            aria-label="Username" aria-describedby="basic-addon1">
+        <small *ngIf="!Form.get('password')?.valid &&  Form.get('password')?.touched">Please enter password
+            address</small>
+    </div>
+    <p><a href="#">Forgot your password?</a></p>
+    <button type="submit" class="btn btn-outline-primary">{{loginMode ? 'Sign In': 'Create Account'}}</button>
+</form>
+<br><br>
+<p> {{loginMode ? 'dont have account?': 'already have account'}}<a href="#" (click)="onModeSwitch()">
+        {{loginMode ? 'Create A NewAccount': 'Sign In'}} </a></p>

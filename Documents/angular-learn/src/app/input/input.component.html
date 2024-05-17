@@ -1,0 +1,8 @@
+<p>input {{myValue}}</p>
+<ng-content></ng-content>
+
+
+<h2>Child to Parent</h2>
+<input type="input" #val>
+<button type="submit" (click)="onSubmit1(val)">CLICK</button>
+<button type="reset" (click)="reset()">RESET</button>

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "authentication-angular-d20fe": {
+      "hosting": {
+        "angular-learn": [
+          "authentication-angular-d20fe"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "authentication-angular-d20fe"
+  }
+}
